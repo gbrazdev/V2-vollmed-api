@@ -1,0 +1,10 @@
+services:
+  vollmed_db:
+    image: mysql:8.0.37-debian
+    volumes:
+      - ./docker/volume_mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: vollmed_api
